@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Leaf, Heart, Sparkles, ArrowRight } from "lucide-react"
+import { Leaf, Heart, Sparkles, ArrowRight, Recycle } from "lucide-react"
 import Image from "next/image"
 
 export default function HeroSection() {
@@ -11,7 +11,7 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge variant="secondary" className="w-fit bg-green-100 text-green-800">
-                ✨ 100% Natural y Artesanal
+                ✨ 100% Artesanal
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
                 Cuida tu piel con
@@ -37,11 +37,11 @@ export default function HeroSection() {
             <div className="flex items-center space-x-8 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <Leaf className="h-4 w-4 text-green-600" />
-                <span>100% Natural</span>
+                <span>100% Ecológico</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Heart className="h-4 w-4 text-pink-500" />
-                <span>Hecho con Amor</span>
+                <Recycle className="h-4 w-4 text-pink-500" />
+                <span>Reutilizable</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Sparkles className="h-4 w-4 text-blue-500" />
