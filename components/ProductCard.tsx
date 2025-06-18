@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -11,6 +13,7 @@ import {
 } from "@/components/ui/dialog"
 import { Leaf, Sparkles, ShoppingCart, Heart } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 interface Producto {
   id: number
@@ -21,6 +24,7 @@ interface Producto {
   ingredientes: string[]
   beneficios: string[]
   proceso: string
+  slug: string
 }
 
 interface ProductCardProps {
@@ -51,6 +55,7 @@ export default function ProductCard({ producto }: ProductCardProps) {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex gap-2">
+          {/* Ver Detalles (modal) */}
           <Dialog>
             <DialogTrigger asChild>
               <Button className="flex-1 bg-purple-600 hover:bg-purple-700">Ver Detalles</Button>
@@ -110,9 +115,21 @@ export default function ProductCard({ producto }: ProductCardProps) {
                     <Heart className="h-4 w-4" />
                   </Button>
                 </div>
+
+                <div className="pt-6 text-center text-sm text-gray-400">
+                  ¿Desde un QR o link?{" "}
+                  <Link
+                    href={`/producto/${producto.slug}`}
+                    className="text-purple-600 hover:underline"
+                  >
+                    Ver versión completa
+                  </Link>
+                </div>
               </div>
             </DialogContent>
           </Dialog>
+
+          {/* Carrito ícono */}
           <Button variant="outline" className="border-purple-300 text-purple-700 hover:bg-purple-50">
             <ShoppingCart className="h-4 w-4" />
           </Button>
@@ -120,4 +137,4 @@ export default function ProductCard({ producto }: ProductCardProps) {
       </CardContent>
     </Card>
   )
-} 
+}
