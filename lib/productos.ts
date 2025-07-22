@@ -26,12 +26,12 @@ const productos = [
     },
     {
         id: 2,
-        nombre: "Jabón de Curcuma",
+        nombre: "Jabón de Cúrcuma",
         precio: "C$00.00",
         imagen: "/placeholder.svg?height=300&width=300",
-        descripcion: "Jabón artesanal de curcuma, esencia de rosa y aceite de coco. Ayuda a unificar el tono de la piel, aporta hidratación y ideal para pieles con manchas.",
+        descripcion: "Jabón artesanal de cúrcuma, esencia de rosa y aceite de coco. Ayuda a unificar el tono de la piel, aporta hidratación y ideal para pieles con manchas.",
         ingredientes: [
-            "Curcuma en polvo",
+            "Cúrcuma en polvo",
             "Aceite de coco",
             "Esencia de rosa",
             "Glicerina Melt & Pour"
