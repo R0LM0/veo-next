@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -32,30 +33,35 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ producto }: ProductCardProps) {
+  const [imgError, setImgError] = useState(false)
+
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow border-purple-100">
-      <div className="aspect-square relative overflow-hidden">
-        <Image
-          src={producto.imagen || "/placeholder.svg"}
-          alt={producto.nombre}
-          fill
-          className="object-cover hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      <CardHeader>
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-xl text-gray-900">{producto.nombre}</CardTitle>
-            <CardDescription className="mt-2">{producto.descripcion}</CardDescription>
-          </div>
-          <Badge variant="secondary" className="bg-green-100 text-green-800 font-bold">
-            {producto.precio}
-          </Badge>
+    <Card className="flex flex-col justify-between h-full overflow-hidden hover:shadow-lg transition-shadow border-purple-100">
+      <div>
+        <div className="aspect-square relative overflow-hidden">
+          <Image
+            src={imgError ? "/placeholder.svg" : producto.imagen}
+            alt={producto.nombre}
+            fill
+            onError={() => setImgError(true)}
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
         </div>
-      </CardHeader>
-      <CardContent className="space-y-4">
+        <CardHeader>
+          <div className="flex justify-between items-start">
+            <div>
+              <CardTitle className="text-xl text-gray-900">{producto.nombre}</CardTitle>
+              <CardDescription className="mt-2">{producto.descripcion}</CardDescription>
+            </div>
+            <Badge variant="secondary" className="bg-green-100 text-green-800 font-bold">
+              {producto.precio}
+            </Badge>
+          </div>
+        </CardHeader>
+      </div>
+
+      <CardContent className="space-y-4 mt-auto">
         <div className="flex gap-2">
-          {/* Ver Detalles (modal) */}
           <Dialog>
             <DialogTrigger asChild>
               <Button className="flex-1 bg-purple-600 hover:bg-purple-700">Ver Detalles</Button>
@@ -68,10 +74,11 @@ export default function ProductCard({ producto }: ProductCardProps) {
               <div className="space-y-6">
                 <div className="aspect-video relative rounded-lg overflow-hidden">
                   <Image
-                    src={producto.imagen || "/placeholder.svg"}
+                    src={imgError ? "/placeholder.svg" : producto.imagen}
                     alt={producto.nombre}
                     fill
                     className="object-cover"
+                    onError={() => setImgError(true)}
                   />
                 </div>
 
@@ -129,7 +136,6 @@ export default function ProductCard({ producto }: ProductCardProps) {
             </DialogContent>
           </Dialog>
 
-          {/* Carrito ícono */}
           <Button variant="outline" className="border-purple-300 text-purple-700 hover:bg-purple-50">
             <ShoppingCart className="h-4 w-4" />
           </Button>

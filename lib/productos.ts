@@ -8,10 +8,11 @@ const productos = [
         ingredientes: [
             "Extracto natural de zanahoria",
             "Miel de abeja pura",
-            "Vitamina E natural",
-            "Aceite de coco virgen",
-            "Manteca de karité",
-            "Glicerina vegetal"
+            "Vitamina E",
+            "Aceite de coco",
+            "Glicerina Melt & Pour",
+            "Colorante",
+            "Aromatizante"
         ],
         beneficios: [
             "Hidrata profundamente la piel",
@@ -20,32 +21,30 @@ const productos = [
             "Libre de químicos agresivos",
         ],
         proceso:
-            "Elaborado mediante el método de saponificación en frío, curado durante 6 semanas para obtener la máxima suavidad y durabilidad.",
+            "Elaborado mediante el método manual, curado durante 3 días para obtener la máxima suavidad y durabilidad.",
         slug: "zanahoria"
     },
     {
         id: 2,
-        nombre: "Jabón de Flor de Jamaica",
+        nombre: "Jabón de Curcuma",
         precio: "C$00.00",
         imagen: "/placeholder.svg?height=300&width=300",
-        descripcion: "Jabón artesanal con flor de jamaica, aceite de coco y esencia de rosa. Exfolia suavemente, hidrata y equilibra la piel.",
+        descripcion: "Jabón artesanal de curcuma, esencia de rosa y aceite de coco. Ayuda a unificar el tono de la piel, aporta hidratación y ideal para pieles con manchas.",
         ingredientes: [
-            "Flor de jamaica seca",
-            "Aceite de coco virgen",
-            "Esencia de rosa natural",
-            "Glicerina vegetal",
-            "Manteca de karité"
+            "Curcuma en polvo",
+            "Aceite de coco",
+            "Esencia de rosa",
+            "Glicerina Melt & Pour"
         ],
         beneficios: [
-            "Exfolia e hidrata suavemente el rostro",
-            "Mejora la textura de la piel",
-            "Aporta luminosidad natural",
-            "Calma y equilibra la piel",
-            "Deja una sensación fresca y suave"
+            "Ayuda a unificar el tono de la piel",
+            "Aporta hidratación",
+            "Ideal para pieles con manchas",
+            "Libre de químicos agresivos",
         ],
         proceso:
-            "Elaborado mediante saponificación en frío, infusionado con flor de jamaica y curado durante 5-6 semanas para preservar sus propiedades naturales.",
-        slug: "jamaica"
+            "Elaborado mediante el método manual, curado durante 3 días para obtener la máxima suavidad y durabilidad.",
+        slug: "curcuma"
     }
 ];
 

@@ -29,21 +29,21 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Productos</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Jabón de Flor de Jamaica
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Jabón de Zanahoria
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Todos los Productos
-                </Link>
-              </li>
+            <li>
+    <Link href="#zanahoria" className="hover:text-white transition-colors">
+      Jabón de Zanahoria
+    </Link>
+  </li>
+  <li>
+    <Link href="#curcuma" className="hover:text-white transition-colors">
+      Jabón de Cúrcuma
+    </Link>
+  </li>
+  <li>
+    <Link href="#productos" className="hover:text-white transition-colors">
+      Todos los Productos
+    </Link>
+  </li>
             </ul>
           </div>
 
@@ -73,11 +73,11 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+505 78567890</span>
+                <span>+505 77043202</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>hola@veo.es</span>
+                <span>hola@veo.ni</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
