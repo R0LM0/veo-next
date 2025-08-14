@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-200 to-blue-200 rounded-full blur-3xl opacity-30"></div>
             <Image
-              src={hasError ? company : "/images/jabonveo.png"} // cambia por tu ruta real del jabón
+              src={hasError ? company : company} // cambia por tu ruta real del jabón
               alt="Empresa artesanal VEO"
               width={600}
               height={600}

@@ -76,8 +76,10 @@ export default function ProductCard({ producto }: ProductCardProps) {
                   <Image
                     src={imgError ? "/placeholder.svg" : producto.imagen}
                     alt={producto.nombre}
+                    height={300}
+                   width={300}
                     fill
-                    className="object-cover"
+                    className="object-cover "
                     onError={() => setImgError(true)}
                   />
                 </div>

@@ -1,9 +1,12 @@
+import zanahoria from "../public/zanahoria1.jpeg";
+import curcuma from "../public/curcuma1.jpg";
+
 const productos = [
     {
         id: 1,
         nombre: "Jabón de Zanahoria",
         precio: "C$00.00",
-        imagen: "/placeholder.svg?height=300&width=300",
+        imagen: zanahoria, // ahora usa la imagen importada
         descripcion: "Jabón artesanal elaborado con zanahoria, miel de abeja y vitamina E, ideal para piel seca o sensible.",
         ingredientes: [
             "Extracto natural de zanahoria",
@@ -28,7 +31,7 @@ const productos = [
         id: 2,
         nombre: "Jabón de Cúrcuma",
         precio: "C$00.00",
-        imagen: "/placeholder.svg?height=300&width=300",
+        imagen: curcuma, // ahora usa la imagen i   mportada
         descripcion: "Jabón artesanal de cúrcuma, esencia de rosa y aceite de coco. Ayuda a unificar el tono de la piel, aporta hidratación y ideal para pieles con manchas.",
         ingredientes: [
             "Cúrcuma en polvo",
