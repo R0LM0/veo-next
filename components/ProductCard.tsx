@@ -72,14 +72,13 @@ export default function ProductCard({ producto }: ProductCardProps) {
                 <DialogDescription className="text-lg">{producto.descripcion}</DialogDescription>
               </DialogHeader>
               <div className="space-y-6">
-                <div className="aspect-video relative rounded-lg overflow-hidden">
+                <div className="relative rounded-lg overflow-hidden bg-gray-100">
                   <Image
                     src={imgError ? "/placeholder.svg" : producto.imagen}
                     alt={producto.nombre}
-                    height={300}
-                   width={300}
-                    fill
-                    className="object-cover "
+                    width={500}
+                    height={400}
+                    className="object-cover rounded-lg w-full h-auto max-h-80"
                     onError={() => setImgError(true)}
                   />
                 </div>
