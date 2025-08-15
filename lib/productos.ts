@@ -5,7 +5,7 @@ const productos = [
     {
         id: 1,
         nombre: "Jabón de Zanahoria",
-        precio: "C$00.00",
+        precio: "C$213.32",
         imagen: zanahoria, // ahora usa la imagen importada
         descripcion: "Jabón artesanal elaborado con zanahoria, miel de abeja y vitamina E, ideal para piel seca o sensible.",
         ingredientes: [
@@ -30,7 +30,7 @@ const productos = [
     {
         id: 2,
         nombre: "Jabón de Cúrcuma",
-        precio: "C$00.00",
+        precio: "C$213.32",
         imagen: curcuma, // ahora usa la imagen i   mportada
         descripcion: "Jabón artesanal de cúrcuma, esencia de rosa y aceite de coco. Ayuda a unificar el tono de la piel, aporta hidratación y ideal para pieles con manchas.",
         ingredientes: [
